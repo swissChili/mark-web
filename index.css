@@ -1,0 +1,103 @@
+@import (less) "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.0/github-markdown.css";
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+html, body, .main, .fullHeight {
+	height: 100;
+}
+
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+	margin-top: -125px;
+	margin-left: -250px;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 60px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+.columns {
+	height: 100vh;
+}
+.padding {
+	padding: 20px;
+}
+#markdown {
+	background-color: #f4f6f7;
+	height: 100%;
+	border-color: #2c3e50;
+	border-width: 5px;
+}
+#editor {
+	background-color: #f4f6f7;
+	border-width: 0px;
+	resize: none;
+	width: 100%;
+	height: 100%;
+}
+#editor-textarea {
+	background-color: #f4f6f7;
+	border-width: 0px;
+	resize: none;
+	width: 100%;
+	height: 100%;
+}
+input:hover, textarea:hover, input:active, textarea:active, input:focus, textarea:focus {
+	outline: 0px;
+}
+.dragable {
+	width: 100%;
+	height: 20px;
+	-webkit-app-region: drag;
+	background-color: #f4f6f7;
+}
+.nodrag {
+	-webkit-app-region: no-drag;
+}
+#top-menu {
+	position: absolute;
+	top: 0;
+	background-color: √;
+}
+#bottom-menu {
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	padding: 10px;
+	background-color: #f4f6f7;
+}
+a a:hover, a:active {
+	color: #2c3e50;
+	text-decoration: none;
+}
+#openFile {
+	visibility: hidden;
+	width: 0px;
+}
+#saveFile {
+	visibility: hidden;
+	width: 0px;
+}
+.columns {
+	display: flex;
+}
+.column {
+	width: 50%;
+}

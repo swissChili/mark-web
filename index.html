@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="githubmarkdown.css" />
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<section class="main">
+
+			<div class="columns fullHeight ">
+				<div class="column fullHeight padding" id="markdown">
+
+					<textarea class=" markdown-body nodrag" id="editor">
+write here using __markdown__</textarea>
+				</div>
+
+				<div class="column fullHeight padding" id="preview">
+					<div class=" markdown-body nodrag" id="output">
+						write here using <i>markdown</i>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+		<div class="markdown-body" id="bottom-menu">
+			<a href="#!" class="btn" id="newBtn">New</a>
+			&nbsp;
+			&nbsp;
+			<a href="#!" class="btn" id="openBtn">Open</a>
+			&nbsp;
+			&nbsp;
+			<a href="#!" class="btn" id="signInBtn">Sign In</a>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAPFu0Jkx8RfGE63YMqxL_y_gvMAy-nNJg",
+		    authDomain: "mark-web-7f4a0.firebaseapp.com",
+		    databaseURL: "https://mark-web-7f4a0.firebaseio.com",
+		    projectId: "mark-web-7f4a0",
+		    storageBucket: "mark-web-7f4a0.appspot.com",
+		    messagingSenderId: "768909409692"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="jquery.js"></script>
+		<script src="marked.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
