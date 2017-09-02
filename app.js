@@ -1,3 +1,14 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAPFu0Jkx8RfGE63YMqxL_y_gvMAy-nNJg",
+  authDomain: "mark-web-7f4a0.firebaseapp.com",
+  databaseURL: "https://mark-web-7f4a0.firebaseio.com",
+  projectId: "mark-web-7f4a0",
+  storageBucket: "mark-web-7f4a0.appspot.com",
+  messagingSenderId: "768909409692"
+};
+firebase.initializeApp(config);
+
 var provider = new firebase.auth.GoogleAuthProvider()
 //set Marked options
 marked.setOptions({
