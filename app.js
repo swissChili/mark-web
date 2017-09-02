@@ -19,19 +19,8 @@ $newFile = $('#newBtn')
 $openFile = $('#openBtn')
 $exportFile = $('#exportBtn')
 $signIn = $('#signInBtn')
+$title = $('#title')
 
-// initialize save function
-var docNumber
-var user = firebase.auth.currentUser
-
-
-function saveFile(title, content, userID) {
-  docNumber = firebase.database().ref(userID + '/docNumber')
-  firebase.database().ref(userID + docNumber).set({
-    title: title,
-    content: content
-  })
-}
 
 
 //initialize markdown conversion
@@ -42,7 +31,7 @@ $(document).ready(function() {
     console.log($('#editor').val())
 
     // save files
-    saveFile($title.text(), $editor.text(), user.uid)
+    saveFile($title.text(), $editor.text(), firebase.auth.currentUser.providerData.uid)
 
   })
 })
@@ -52,8 +41,26 @@ $newFile.click(function() {
   docNumber = docNumber + 1
 })
 
+
+
+// initialize save function
+var docNumber
+
+
 // signing with da googles
 
 $signIn.click(function(){
-  firebase.auth().signInWithRedirect(provider);
+  firebase.auth().signInWithRedirect(provider)
 })
+
+
+var user = firebase.auth().currentUser
+console.log(user)
+
+function saveFile(title, content, userID) {
+  docNumber = firebase database().ref(userID + '/docNumber')
+  firebase.database().ref(userID + docNumber).set({
+    title: title,
+    content: content
+  })
+}

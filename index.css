@@ -58,7 +58,7 @@ header h1 {
 	width: 100%;
 	height: 100%;
 }
-input:hover, textarea:hover, input:active, textarea:active, input:focus, textarea:focus {
+.flat:hover, textarea:hover, .flat:active, textarea:active, .flat:focus, textarea:focus {
 	outline: 0px;
 }
 .dragable {
